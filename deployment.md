@@ -32,6 +32,6 @@ chmod a+rx resize.sh && ./resize.sh 80
 
 
 ```text
-curl https://github.com/kyopark2014/aws-sif-for-esg/installDeps.bash -o installDeps.bash && chmod a+rx resize.sh
+curl https://github.com/kyopark2014/aws-sif-for-esg/installDeps.bash -o installDeps.bash && chmod a+rx installDeps.bash && ./installDeps.bash
 ```
 
