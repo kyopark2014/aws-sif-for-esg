@@ -9,3 +9,5 @@ Environment의 이름으로 "ESG Project"을 입력한 후에, EC2 Instance로 "
 ![noname](https://github.com/kyopark2014/esg-deployment/assets/52392004/e00369e0-c5c1-4574-97b1-468ffecdfec7)
 
 
+아래와 같이 [Environment](https://ap-northeast-2.console.aws.amazon.com/cloud9control/home?region=ap-northeast-2#/)에서 [Open]을 선택합니다. 
+
