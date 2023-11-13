@@ -50,7 +50,45 @@ cd guidance-for-aws-sustainability-insights-framework/
 rush update --bypass-policy
 cd ~/environment/guidance-for-aws-sustainability-insights-framework/java/apps/calculator/ && mvn clean install
 cd ~/environment/guidance-for-aws-sustainability-insights-framework/java/apps/referencedatasets-indexer/ && mvn clean install
-cd ../tenant
-npm run cdk -- deploy -c tenantId=<tenant ID> -c environment=<environment> -c administratorEmail=<admin email> -c enableDeleteResource=true -c deleteBucket=true --all --require-approval never --concurrency=10
+cd ~/environment/guidance-for-aws-sustainability-insights-framework/infrastructure/platform/
+```
 
+여기서 "npm run cdk -- bootstrap -c environment=<environment> --all"를 입력하는데 environment를 "workshop"로 설정합니다.
+```text
+npm run cdk -- bootstrap -c environment="workshop" --all
+```
+
+
+*실행 실패*
+
+```text
+$ npm run cdk -- bootstrap -c environment="workshop" --all
+
+> @sif/infrastructure-platform@2.6.0 cdk
+> cdk bootstrap -c environment=workshop --all
+
+npm WARN exec The following package was not found and will be installed: ts-node@10.9.1
+/home/ubuntu/.npm/_npx/1bf7c3c15bf47d04/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+error TS6053: File '@tsconfig/node16-strictest-esm/tsconfig.json' not found.
+
+    at createTSError (/home/ubuntu/.npm/_npx/1bf7c3c15bf47d04/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/home/ubuntu/.npm/_npx/1bf7c3c15bf47d04/node_modules/ts-node/src/index.ts:863:19)
+    at createFromPreloadedConfig (/home/ubuntu/.npm/_npx/1bf7c3c15bf47d04/node_modules/ts-node/src/index.ts:874:36)
+    at phase4 (/home/ubuntu/.npm/_npx/1bf7c3c15bf47d04/node_modules/ts-node/src/bin.ts:543:44)
+    at bootstrap (/home/ubuntu/.npm/_npx/1bf7c3c15bf47d04/node_modules/ts-node/src/bin.ts:95:10)
+    at Object.<anonymous> (/home/ubuntu/.npm/_npx/1bf7c3c15bf47d04/node_modules/ts-node/src/child/child-entrypoint.ts:24:10)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:938:12) {
+  diagnosticCodes: [ 6053 ]
+}
+```
+
+```text
+npm run cdk -- deploy -c tenantId=<tenant ID> -c environment=<environment> -c administratorEmail=<admin email> -c enableDeleteResource=true -c deleteBucket=true --all --require-approval never --concurrency=10
+```
 ```
