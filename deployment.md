@@ -43,3 +43,16 @@ chmod a+rx resize.sh && ./resize.sh 80
 curl https://raw.githubusercontent.com/kyopark2014/aws-sif-for-esg/main/installDeps.bash -o installDeps.bash && chmod a+rx installDeps.bash && ./installDeps.bash
 ```
 
+```text
+cd ~/environment
+git clone https://github.com/aws-solutions-library-samples/guidance-for-aws-sustainability-insights-framework.git
+cd guidance-for-aws-sustainability-insights-framework/
+rush update --bypass-policy
+cd ~/environment/guidance-for-aws-sustainability-insights-framework/java/apps/calculator/
+mvn clean install
+cd ~/environment/guidance-for-aws-sustainability-insights-framework/java/apps/referencedatasets-indexer/
+mvn clean install
+cd ../tenant
+npm run cdk -- deploy -c tenantId=<tenant ID> -c environment=<environment> -c administratorEmail=<admin email> -c enableDeleteResource=true -c deleteBucket=true --all --require-approval never --concurrency=10
+
+```
