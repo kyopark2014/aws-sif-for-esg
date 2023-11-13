@@ -6,13 +6,13 @@
 
 2) Environment의 이름으로 "ESG Project"을 입력합니다.
 
+![noname](https://github.com/kyopark2014/aws-sif-for-esg/assets/52392004/2c45d659-f5aa-40e0-8b60-70246c2d7a05)
+
+
 EC2 Instance로 "m5.large"을 선택하고, Platform으로는 "Ubuntu Server 22.04 LTS"을 선택합니다. 이후 나머지는 기본값을 선택하고 스크롤하여, [Create]를 선택합니다.
 
 ![noname](https://github.com/kyopark2014/aws-sif-for-esg/assets/52392004/1f153467-7c1d-4b4d-ab3b-b5b0f9ff9900)
 
-
-
-![noname](https://github.com/kyopark2014/esg-deployment/assets/52392004/e00369e0-c5c1-4574-97b1-468ffecdfec7)
 
 
 아래와 같이 [Environment](https://ap-northeast-2.console.aws.amazon.com/cloud9control/home?region=ap-northeast-2#/)에서 [Open]을 선택합니다. 
