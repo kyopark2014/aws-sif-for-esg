@@ -40,6 +40,6 @@ chmod a+rx resize.sh && ./resize.sh 80
 5) 스크립트 설치하기
 
 ```text
-curl https://github.com/kyopark2014/aws-sif-for-esg/installDeps.bash -o installDeps.bash && chmod a+rx installDeps.bash && ./installDeps.bash
+curl https://raw.githubusercontent.com/kyopark2014/aws-sif-for-esg/main/installDeps.bash -o installDeps.bash && chmod a+rx installDeps.bash && ./installDeps.bash
 ```
 
