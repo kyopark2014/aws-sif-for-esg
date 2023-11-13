@@ -19,11 +19,12 @@ EC2 Instance로 "m5.large"을 선택하고, Platform으로는 "Ubuntu Server 22.
 
 ![noname](https://github.com/kyopark2014/esg-deployment/assets/52392004/44072964-52a6-4c12-a9d4-6a3019b96a90)
 
-2) [Environment](https://ap-northeast-2.console.aws.amazon.com/cloud9control/home?region=ap-northeast-2#/)에서 “chatbot”를 [Open]한 후에 아래와 같이 터미널을 실행합니다.
+3) [Environment](https://ap-northeast-2.console.aws.amazon.com/cloud9control/home?region=ap-northeast-2#/)에서 “chatbot”를 [Open]한 후에 아래와 같이 터미널을 실행합니다.
 
-![noname](https://github.com/kyopark2014/chatbot-based-on-Falcon-FM/assets/52392004/b7d0c3c0-3e94-4126-b28d-d269d2635239)
+![noname](https://github.com/kyopark2014/aws-sif-for-esg/assets/52392004/8b084c96-584b-45c6-a1fb-a00af4f832c0)
 
-3) EBS 크기 변경
+
+4) EBS 크기 변경
 
 아래와 같이 스크립트를 다운로드 합니다. 
 
@@ -36,6 +37,7 @@ curl https://raw.githubusercontent.com/kyopark2014/technical-summary/main/resize
 chmod a+rx resize.sh && ./resize.sh 80
 ```
 
+5) 스크립트 설치하기
 
 ```text
 curl https://github.com/kyopark2014/aws-sif-for-esg/installDeps.bash -o installDeps.bash && chmod a+rx installDeps.bash && ./installDeps.bash
