@@ -48,10 +48,8 @@ cd ~/environment
 git clone https://github.com/aws-solutions-library-samples/guidance-for-aws-sustainability-insights-framework.git
 cd guidance-for-aws-sustainability-insights-framework/
 rush update --bypass-policy
-cd ~/environment/guidance-for-aws-sustainability-insights-framework/java/apps/calculator/
-mvn clean install
-cd ~/environment/guidance-for-aws-sustainability-insights-framework/java/apps/referencedatasets-indexer/
-mvn clean install
+cd ~/environment/guidance-for-aws-sustainability-insights-framework/java/apps/calculator/ && mvn clean install
+cd ~/environment/guidance-for-aws-sustainability-insights-framework/java/apps/referencedatasets-indexer/ && mvn clean install
 cd ../tenant
 npm run cdk -- deploy -c tenantId=<tenant ID> -c environment=<environment> -c administratorEmail=<admin email> -c enableDeleteResource=true -c deleteBucket=true --all --require-approval never --concurrency=10
 
