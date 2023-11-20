@@ -48,8 +48,17 @@ cd ~/environment
 git clone https://github.com/aws-solutions-library-samples/guidance-for-aws-sustainability-insights-framework.git
 cd guidance-for-aws-sustainability-insights-framework/
 rush update --bypass-policy
+```
+
+Build SIF
+```text
+rush build
 cd ~/environment/guidance-for-aws-sustainability-insights-framework/java/apps/calculator/ && mvn clean install
 cd ~/environment/guidance-for-aws-sustainability-insights-framework/java/apps/referencedatasets-indexer/ && mvn clean install
+```
+
+Deploy the Platform Infrastructure
+```text
 cd ~/environment/guidance-for-aws-sustainability-insights-framework/infrastructure/platform/
 ```
 
